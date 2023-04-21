@@ -177,12 +177,7 @@ include('../message.php');
         chart.draw(data, google.charts.Bar.convertOptions(options));
       }
     </script>
-    <div id="barchart_material" style="width: 1300px; height: 700px;"></div>
-
-<?php
-include('includes/scripts.php');
-?>
-
+    <div id="barchart_material" style="width: 1300px; height: 700px;"></div> 
 </script>                               
 <?php
 include('includes/scripts.php');
