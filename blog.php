@@ -55,15 +55,9 @@ include('./config/dbconfig.php');
             <li class="nav-item">
               <a class="nav-link" href="vaccines.php">Vaccine Information</a>
             </li>
-             <li class="nav-item">
-              <a class="btn btn-primary ml-lg-3" href="login.php">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-primary ml-lg-3" href="register.php">Register</a>
-            </li>
           </ul>
-        </div> <!-- .navbar-collapse -->
-      </div> <!-- .container -->
+        </div> 
+      </div> 
     </nav>
   </header>
 

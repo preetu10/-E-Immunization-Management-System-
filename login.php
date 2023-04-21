@@ -1,11 +1,5 @@
 <?php
 session_start();
-// if(isset($_SESSION['auth']))
-// {
-//    $_SESSION['message'] = "You are Already Logged In";
-//    header("Location: login.php");
-//    exit(0);
-// }
 include('message.php');
 ?>
 <!DOCTYPE html>
@@ -25,8 +19,6 @@ include('message.php');
 
   <link rel="stylesheet" href="./assets/vendor/owl-carousel/css/owl.carousel.css">
 
-  <link rel="stylesheet" href="./assets/vendor/animate/animate.css">
-
   <link rel="stylesheet" href="./assets/css/theme.css">
 
     <link rel="stylesheet" href="./assets/css/login.css">
@@ -42,10 +34,6 @@ include('message.php');
       <div class="container">
         <form action="#">
           <div class="input-group input-navbar">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
-            </div>
-            <input type="text" class="form-control" placeholder="Type to search..." aria-label="Username" aria-describedby="icon-addon1">
           </div>
         </form>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,7 +49,7 @@ include('message.php');
               <a class="nav-link" href="about.php">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="doctors.php">Vaccine Information</a>
+              <a class="nav-link" href="vaccines.php">Vaccine Information</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="blog.php">Events</a>

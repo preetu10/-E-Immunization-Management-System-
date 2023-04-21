@@ -9,8 +9,6 @@ session_start();
 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <meta name="copyright" content="MACode ID, https://macodeid.com/">
-
   <title>Homepage</title>
 
   <link rel="stylesheet" href="./assets/css/maicons.css">
@@ -18,8 +16,6 @@ session_start();
   <link rel="stylesheet" href="./assets/css/bootstrap.css">
 
   <link rel="stylesheet" href="./assets/vendor/owl-carousel/css/owl.carousel.css">
-
-  <link rel="stylesheet" href="./assets/vendor/animate/animate.css">
 
   <link rel="stylesheet" href="./assets/css/theme.css">
 </head>
@@ -30,14 +26,6 @@ session_start();
     <img src="./assets/img/logo.png" class="logo">
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
-        <form action="#">
-          <div class="input-group input-navbar">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
-            </div>
-            <input type="text" class="form-control" placeholder="Type to search..." aria-label="Username" aria-describedby="icon-addon1">
-          </div>
-        </form>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -73,7 +61,7 @@ session_start();
     <div class="hero-section">
       <div class="container text-center wow zoomIn">
         <h1>XYZ HEALTHCARE</h1>
-        <h2>SafeVAX</h2>
+        <h2>SafeVax</h2>
         <h5>SAVE TIME, STAY CURRENT, AND DELIVER THE BEST</h5>
       </div>
     </div>
@@ -85,7 +73,7 @@ session_start();
       <div class="row px-md-3">
         <div class="col-sm-6 col-lg-3 py-3">
           <h5>Contact</h5>
-          <p class="footer-link mt-2">351 Willow Street Franklin, MA 02038</p>
+          <p class="footer-link mt-2">University of Chittagong</p>
           <a href="#" class="footer-link">701-573-7582</a>
           <a href="#" class="footer-link">safevax@gmail.com</a>
         </div>
