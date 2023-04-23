@@ -19,8 +19,8 @@ if(isset($_POST['save']))
 
     if($password==$rpassword){
 
-    $query = "UPDATE `user` SET u_firstname='$fname',u_lastname='$lname',u_ffirstname='$ffirstname',u_flastname='$flastname',u_fnid='$fnid',u_division='$division',u_email='$email',u_gender='$gender',u_dob='$dob',u_password='$password'  WHERE u_id='$id' ;";
-    $query_run = mysqli_query($conn, $query);
+    $query = "UPDATE user SET u_firstname='$fname',u_lastname='$lname',u_ffirstname='$ffirstname',u_flastname='$flastname',u_fnid='$fnid',u_division='$division',u_email='$email',u_gender='$gender',u_dob='$dob',u_password='$password'  WHERE u_id='$id' ;";
+    $query_run = mysqli_query($con, $query);
 
             if($query_run)
             {

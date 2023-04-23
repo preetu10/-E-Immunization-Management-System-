@@ -37,6 +37,9 @@ include('./config/dbconfig.php');
 
         <div class="collapse navbar-collapse" id="navbarSupport">
           <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="index.php">Home</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="about.php">About Us</a>
             </li>

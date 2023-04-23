@@ -4,9 +4,9 @@ include('includes/header.php');
 ?>
 
 <div class="container-fluid px-4">
-                <h1 class="mt-4">THE XYZ HEALTH CARE ADMIN PANEL</h1>
+                <h1 class="mt-4">THE XYZ HEALTH CARE ADMIN PANEL</h4>
                 <ol class="breadcrumb mb-4">
-                    <h4><li class="breadcrumb-item active">Dashboard/Send Remainder</li></h4>
+                    <h4><li class="breadcrumb-item active">Dashboard/Send Remainder</li></h6>
                 </ol>
         <div class="card-body">
             <div class="table-responsive">

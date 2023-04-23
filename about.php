@@ -41,7 +41,7 @@
               <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="doctors.php">Vaccine Information</a>
+              <a class="nav-link" href="vaccines.php">Vaccine Information</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="blog.php">Events</a>

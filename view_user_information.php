@@ -285,15 +285,6 @@ if(($retrive_tt5)>0)
 
         <div class="collapse navbar-collapse" id="navbarSupport">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="about.php">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="doctors.php">Vaccine Information</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blog.php">Events</a>
-            </li>
             <li>
               <form action="logout.php" method="POST">
                 <button type="submit" class="btn btn-primary btn-sm" name="logout_btn"> Logout</button>

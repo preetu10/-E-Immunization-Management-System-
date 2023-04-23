@@ -22,8 +22,6 @@ $email=$_POST['email'];
 
   <link rel="stylesheet" href="./assets/vendor/owl-carousel/css/owl.carousel.css">
 
-  <link rel="stylesheet" href="./assets/vendor/animate/animate.css">
-
   <link rel="stylesheet" href="./assets/css/theme.css">
 </head>
 <body>
@@ -36,10 +34,6 @@ $email=$_POST['email'];
       <div class="container">
         <form action="#">
           <div class="input-group input-navbar">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
-            </div>
-            <input type="text" class="form-control" placeholder="Type to search..." aria-label="Username" aria-describedby="icon-addon1">
           </div>
         </form>
 

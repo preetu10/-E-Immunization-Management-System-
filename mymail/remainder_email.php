@@ -90,7 +90,7 @@ include('./config/dbconfig.php');
 							//$mail->addAttachment('img/attachment.png');
 						//Email body
 							$mail->Body = "<p>Dear $full_name ,<br>
-                                            This is a remainder email in the case that your upcoming dose of $vname vaccine i.e $dose no dose is needed to be taken on $up_push. Get your dose on time and stay protected. Don't forget to make appointment for this upcoming dose.<br><br>
+                                            This is a reminder email in the case that your upcoming dose of $vname vaccine i.e $dose no dose is needed to be taken on $up_push. Get your dose on time and stay protected. Don't forget to make appointment for this upcoming dose.<br><br>
 							              Regards<br>
 										  XYZ Health Care<br></p>";
 						//Add recipient
@@ -110,12 +110,12 @@ include('./config/dbconfig.php');
 						//Closing smtp connection
 							$mail->smtpClose();
 					}
-			header("Location: ../admin/send_remainder.php");
+			header("Location: ../admin/send_reminder.php");
 			exit(0);
 
 	}
 	else{
-	header("Location: ../admin/send_remainder.php");
+	header("Location: ../admin/send_reminder.php");
 	exit(0);
 	}
 

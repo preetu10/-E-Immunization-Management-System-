@@ -38,9 +38,7 @@ include('./message.php');
         <form action="#">
           <div class="input-group input-navbar">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
             </div>
-            <input type="text" class="form-control" placeholder="Type to search..." aria-label="Username" aria-describedby="icon-addon1">
           </div>
         </form>
 
@@ -50,23 +48,10 @@ include('./message.php');
 
         <div class="collapse navbar-collapse" id="navbarSupport">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.php">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.php">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="doctors.php">Vaccine Information</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blog.php">Events</a>
-            </li>
              <li class="nav-item">
               <a class="btn btn-primary ml-lg-3" href="logout.php">Log Out</a>
             </li>
-            
-          </ul>
+         </ul>
         </div> 
       </div> 
     </nav>
@@ -88,7 +73,7 @@ include('./message.php');
                 {
                 ?>
 
-                    <form action="edit_profilecon.php" method="POST">
+                    <form action="edit-profilecon.php" method="POST">
                     <input type="hidden" name="edit_id" value="<?php echo $row['u_id'];?>" >
 
                         <div class="row gx-3 mb-3">
@@ -183,7 +168,6 @@ include('./message.php');
                 </div>
             </div>
         </div>
-<!-- </div> -->
 
 <script src="./assets/js/jquery-3.5.1.min.js"></script>
 

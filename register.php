@@ -20,8 +20,6 @@ include('message.php');
 
   <link rel="stylesheet" href="./assets/vendor/owl-carousel/css/owl.carousel.css">
 
-  <link rel="stylesheet" href="./assets/vendor/animate/animate.css">
-
   <link rel="stylesheet" href="./assets/css/theme.css">
 
   <link rel="stylesheet" href="./assets/css/register.css">
@@ -38,10 +36,6 @@ include('message.php');
       <div class="container">
         <form action="#">
           <div class="input-group input-navbar">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
-            </div>
-            <input type="text" class="form-control" placeholder="Type to search..." aria-label="Username" aria-describedby="icon-addon1">
           </div>
         </form>
 
@@ -51,17 +45,17 @@ include('message.php');
 
         <div class="collapse navbar-collapse" id="navbarSupport">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+          <li class="nav-item">
+              <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
+              <a class="nav-link" href="about.php">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="doctors.html">Vaccine Information</a>
+              <a class="nav-link" href="vaccines.php">Vaccine Information</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blog.html">Events</a>
+              <a class="nav-link" href="blog.php">Events</a>
             </li>
              <li class="nav-item">
               <a class="btn btn-primary ml-lg-3" href="login.php">Login</a>

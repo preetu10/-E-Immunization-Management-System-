@@ -5,7 +5,8 @@ if(isset($_POST['btn']))
     $email=mysqli_real_escape_string($con,$_POST['email']);
     $vaccine=mysqli_real_escape_string($con,$_POST['vaccine']);
     $dose=mysqli_real_escape_string($con,$_POST['dose']);
-    
+    $doseprev = $dose - 1;
+
     $result1 = mysqli_query($con, "SELECT u_id FROM user WHERE u_email='$email'");
     $retrive1 = mysqli_fetch_array($result1);
     $patientid = $retrive1['u_id'];
@@ -21,13 +22,25 @@ if(isset($_POST['btn']))
     $result1=mysqli_query($con, "SELECT * FROM registers_for 
     WHERE vaccineid='$vaccineid' AND patientid='$patientid' AND doseno='$dose' ");
     $retrive1= mysqli_fetch_array($result1);
+
+    $result2=mysqli_query($con, "SELECT * FROM registers_for 
+    WHERE vaccineid='$vaccineid' AND patientid='$patientid' AND doseno='$doseprev' ");
+    $retrive2= mysqli_fetch_array($result2);
     
-    if(($retrive1)>0)
+    if($retrive1 > 0)
     {
         $_SESSION['message'] ="You Have Already Registered for the Dose or You Have Taken the Dose";
         header("Location: view_user_information.php");
         exit(0);  
     }
+
+    else if ( $retrive2 == NULL )
+    {
+      $_SESSION['message'] ="Please, Take the Previous Dose First!";
+      header("Location: view_user_information.php");
+      exit(0);  
+    }
+
     else
     {
        if($totaldose >= $dose)

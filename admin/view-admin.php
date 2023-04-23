@@ -9,10 +9,10 @@ include('../message.php');
             <li class="breadcrumb-item active">Dashboard</li>
             <li class="breadcrumb-item active">Admins</li>
         </ol>
-    <form action="add-admin.php" method="POST">
+    <!-- <form action="add-admin.php" method="POST">
       <input type="hidden" name="add-id" value="<?php echo $row['u_id']; ?>">
         <button type="submit" name="add" class="btn btn-primary">Add Admin</button>
-    </form><br>
+    </form><br> -->
 
     <div class="row">
       <div class = "col-md-12">
@@ -31,7 +31,7 @@ include('../message.php');
                     <th>Birth Date</th>
                     <th>Email</th>
                     <th>Joined At</th>
-                    <th>Edit</th>
+                    <!-- <th>Edit</th> -->
                 </tr>
                </thead>
                <tbody>
@@ -51,12 +51,12 @@ include('../message.php');
                     <td><?= $row['u_dob']; ?></td>
                     <td><?= $row['u_email']; ?></td>
                     <td><?= $row['dateofcreation']; ?></td>
-                    <td>
+                    <!-- <td>
                       <form action="edit-admin.php" method="POST">
                         <input type="hidden" name="edit_id" value="<?php echo $row['u_id']; ?>">
                           <button type="submit" name="edit" class="btn btn-success"> Edit</button>
                       </form>
-                    </td>
+                    </td> -->
                   </tr>
                 <?php
                 }
