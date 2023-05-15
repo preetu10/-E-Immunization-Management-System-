@@ -1,7 +1,7 @@
 <?php
 include('authentication.php');
 if(isset($_POST['btn']))
-{
+  {
     $email=mysqli_real_escape_string($con,$_POST['email']);
     $vaccine=mysqli_real_escape_string($con,$_POST['vaccine']);
     $dose=mysqli_real_escape_string($con,$_POST['dose']);
@@ -19,32 +19,69 @@ if(isset($_POST['btn']))
     $retrive = mysqli_fetch_array($result);
     $totaldose = $retrive['totaldose'];
     
+    if($totaldose < $dose || $dose <= 0)
+    {
+     if($totaldose > 1 ) $_SESSION['message'] ="Enter Dose No. Between 1 to  $totaldose for $vaccine";
+     else $_SESSION['message'] ="Enter Dose No. 1 for $vaccine";
+     header("Location: view_user_information.php");
+     exit(0);
+    }
+
     $result1=mysqli_query($con, "SELECT * FROM registers_for 
     WHERE vaccineid='$vaccineid' AND patientid='$patientid' AND doseno='$dose' ");
     $retrive1= mysqli_fetch_array($result1);
+    
+    if($retrive1 > 0)
+    {
+      $reg_serial = $retrive1['reg_serial'];
+      $result3=mysqli_query($con, "SELECT * FROM pushed 
+      where appointmentid = $reg_serial");
+      $retrive3= mysqli_fetch_array($result3);
+
+      if($retrive3)
+      {
+        $_SESSION['message'] ="You Have Already Taken the Dose No. $dose of Vaccine $vaccine";
+        header("Location: view_user_information.php");
+        exit(0);  
+      }
+      else
+      {
+      $_SESSION['message'] ="You Have Already Registered for the Dose No. $dose of Vaccine $vaccine";
+      header("Location: view_user_information.php");
+      exit(0);
+      }  
+    }
 
     $result2=mysqli_query($con, "SELECT * FROM registers_for 
     WHERE vaccineid='$vaccineid' AND patientid='$patientid' AND doseno='$doseprev' ");
     $retrive2= mysqli_fetch_array($result2);
     
-    if($retrive1 > 0)
+    if($doseprev > 0)
     {
-        $_SESSION['message'] ="You Have Already Registered for the Dose or You Have Taken the Dose";
+      if ( !$retrive2 )
+      {
+        $_SESSION['message'] ="Please, Register for the Dose No. $doseprev for $vaccine";
         header("Location: view_user_information.php");
         exit(0);  
+      }
+
+      else
+      {
+        $reg_serial = $retrive2['reg_serial'];
+        $result3=mysqli_query($con, "SELECT * FROM pushed 
+        where appointmentid = $reg_serial");
+        $retrive3= mysqli_fetch_array($result3);
+
+        if ( !$retrive3 )
+        {
+          $_SESSION['message'] ="Please, Take the Dose No. $doseprev for $vaccine";
+          header("Location: view_user_information.php");
+          exit(0);  
+        }
+      }
+    
     }
 
-    else if ( $retrive2 == NULL )
-    {
-      $_SESSION['message'] ="Please, Take the Previous Dose First!";
-      header("Location: view_user_information.php");
-      exit(0);  
-    }
-
-    else
-    {
-       if($totaldose >= $dose)
-       {
           $user_query="INSERT INTO registers_for (patientid, vaccineid, doseno) VALUES ('$patientid','$vaccineid','$dose')";
           $user_query_run=mysqli_query($con, $user_query);
         
@@ -62,12 +99,4 @@ if(isset($_POST['btn']))
 
           }
        }
-       else
-       {
-        $_SESSION['message'] ="Unsuccessful. Please, Enter Valid Dose No.";
-        header("Location: view_user_information.php");
-        exit(0);
-       }
-    }
-}
 ?>
