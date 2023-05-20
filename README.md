@@ -21,7 +21,7 @@
 - Extract files in C:\\xampp\htdocs\ and save with a name as like as eimscy.
 - Open link localhost/phpmyadmin/
 - Click on New at side navbar.
-- Give a name(SafeVax) to database and click Create button.
+- Give a name(eimscy) to database and click Create button.
 - Click on Import and browse the file in directory
   ````bash
   E-Immunization-Management-System-/eimscy.sql
